@@ -34,12 +34,17 @@ arrays. You shouldn't need to touch the components for normal edits.
 Other files:
 
 ```
-app/globals.css     all styling (the colour palette is at the top, in :root)
-app/layout.tsx      fonts and page metadata
-app/fonts/          Archivo + JetBrains Mono (SIL Open Font License)
-components/         one file per section
-data/icon-sprite.ts inlined brand icons (Simple Icons)
-public/finrl.png    FinRL logo, used as a chip icon
+app/globals.css      all styling (the colour palette is at the top, in :root)
+app/layout.tsx       fonts and page metadata
+app/manifest.ts      web app manifest (name, icons, theme colour)
+app/favicon.ico      tab icon — Next picks these up by filename
+app/icon.png         512px app icon
+app/apple-icon.png   iOS home-screen icon
+app/fonts/           Archivo + JetBrains Mono (SIL Open Font License)
+components/          one file per section
+data/icon-sprite.ts  inlined brand icons (Simple Icons)
+public/Resume_DS.pdf the resume the nav button links to
+public/*.png         logos used as chip icons, plus the Android app icons
 ```
 
 ## Case studies
@@ -62,13 +67,15 @@ previous/next links all pick it up automatically — just add a matching
 
 ## Still to do
 
-1. **Resume.** Put the PDF in `public/` and set `links.resume` to
-   `/your-file.pdf`.
-2. **Favicon.** Drop a `favicon.ico` or `icon.png` into `app/`.
-3. **Social image.** Add `public/og.png` at 1200x630, then set `metadataBase`
-   and `openGraph.images` in `app/layout.tsx` once you have a domain.
-4. **Check the placeholder content.** The stat boxes, the CU Boulder dates and
-   some skill chips are my guesses. The achievements entries are stubs.
+1. **Social image.** Add `public/og.png` at 1200x630, then set `metadataBase`
+   and `openGraph.images` in `app/layout.tsx` once the site has a URL. This is
+   the preview card shown when the link is pasted into LinkedIn, Slack or
+   iMessage. Without it, those show an empty box.
+2. **Glaucoma case study.** It credits the whole team but doesn't say which
+   parts were mine — worth a short "My role" section.
+
+Done: resume (`public/Resume_DS.pdf`), favicons and app icons, all project and
+paper links.
 
 ## Adding a colour
 
@@ -87,12 +94,24 @@ find its slug at simpleicons.org, then:
 3. Use `{ name: "Thing", icon: "SLUG" }` in `content.ts`.
 
 For a logo that isn't in Simple Icons, put a PNG in `public/` and use
-`{ name: "Thing", img: "/thing.png" }` instead — that's how FinRL works.
+`{ name: "Thing", img: "/thing.png" }` instead — that's how FinRL, matplotlib
+and tidymodels work.
+
+For a wide wordmark rather than a square mark, use `wordmark: "/thing.png"`.
+It renders at its natural width instead of being squeezed into a 16px square —
+that's how Massive works. Recolour a dark wordmark to near-white first, or it
+disappears against the dark chip.
 
 Only use a logo when it's genuinely that tool's mark. A wrong logo reads as a
 false claim to anyone who knows the tool.
 
 ## Deploying
 
-Push to GitHub, import the repo at vercel.com, accept the defaults. It's a
-static site, so Vercel's free tier is plenty.
+Push to GitHub, import the repo at vercel.com, accept the defaults — it detects
+Next.js on its own. Every push to `main` redeploys automatically.
+
+```bash
+git add .
+git commit -m "What changed"
+git push
+```
