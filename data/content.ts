@@ -24,7 +24,7 @@ export const person = {
 };
 
 export const links = {
-  resume: "#", // put the PDF in /public and point here, e.g. "/tyler-hobbs-resume.pdf"
+  resume: "/Resume_DS.pdf", // put the PDF in /public and point here, e.g. "/tyler-hobbs-resume.pdf"
   github: "https://github.com/tyhobbs",
   linkedin: "https://www.linkedin.com/in/tylerhobbs2/",
   huggingface: "https://huggingface.co/tyhob",
