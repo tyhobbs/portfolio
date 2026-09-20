@@ -11,7 +11,7 @@ export function Chip({ skill }: { skill: Skill }) {
       )}
       {skill.img && <img src={skill.img} alt="" />}
       {skill.wordmark && <img className="wordmark" src={skill.wordmark} alt={skill.name} />}
-      {skill.name}
+      {skill.label ?? skill.name}
     </span>
   );
 }
