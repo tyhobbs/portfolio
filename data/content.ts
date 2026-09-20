@@ -14,7 +14,6 @@ export const person = {
   name: "Tyler Hobbs",
   handle: "tyhobbs",
   title: ["Machine", "Learning", "Engineer"],
-  status: "Open to ML engineer & applied scientist roles",
   lead:
     "I build models, then check whether their numbers mean what they appear to. " +
     "Four years in proteomics and genomics labs, now finishing an ",
