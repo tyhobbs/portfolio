@@ -4,9 +4,6 @@ export function Hero() {
   return (
     <section className="hero" id="top">
       <div className="wrap">
-        <div className="eyebrow">
-          <span className="dot" /> {person.status.toUpperCase()}
-        </div>
         <h1>
           {person.title[0]}
           <br />
