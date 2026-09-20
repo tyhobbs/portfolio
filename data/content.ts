@@ -3,7 +3,8 @@
 // ---------------------------------------------------------------------------
 
 export type Skill = {
-  name: string;
+  name: string;      // also the image alt text
+  label?: string;    // shown instead of name, when a wordmark carries the name
   icon?: string;      // a slug in data/icon-sprite.ts
   img?: string;       // a square logo in /public
   wordmark?: string;  // a wide logo in /public, shown instead of a square icon
@@ -23,7 +24,7 @@ export const person = {
 };
 
 export const links = {
-  resume: "/Resume_DS.pdf", // put the PDF in /public and point here, e.g. "/tyler-hobbs-resume.pdf"
+  resume: "#", // put the PDF in /public and point here, e.g. "/tyler-hobbs-resume.pdf"
   github: "https://github.com/tyhobbs",
   linkedin: "https://www.linkedin.com/in/tylerhobbs2/",
   huggingface: "https://huggingface.co/tyhob",
@@ -243,7 +244,7 @@ export const projects: Project[] = [
       { name: "FinRL", img: "/finrl.png" },
       { name: "PPO" },
       { name: "FinBERT" },
-      { name: "(Polygon.io)", wordmark: "/massive.png" },
+      { name: "Massive, formerly Polygon.io", label: "(Polygon.io)", wordmark: "/massive.png" },
       { name: "Multi-seed evaluation" },
     ],
     links: [
@@ -297,6 +298,7 @@ export const sections = [
   { id: "about", label: "About" },
   { id: "stack", label: "Stack" },
   { id: "projects", label: "Projects" },
+  { id: "work", label: "Case studies", href: "/work" },
   { id: "achievements", label: "Achievements" },
   { id: "contact", label: "Contact" },
 ];
