@@ -23,10 +23,29 @@ const mono = localFont({
   display: "swap",
 });
 
+const title = "Tyler Hobbs — Machine Learning Engineer";
+const description =
+  "LLM fine-tuning, model evaluation and medical imaging. M.S. Data Science, University of Virginia, December 2026.";
+
 export const metadata: Metadata = {
-  title: "Tyler Hobbs — Machine Learning Engineer",
-  description:
-    "Portfolio of Tyler Hobbs: LLM fine-tuning, model evaluation and medical imaging. M.S. Data Science, University of Virginia.",
+  // Change this one line if the site moves to a custom domain.
+  metadataBase: new URL("https://tyhobbs.vercel.app"),
+  title,
+  description,
+  openGraph: {
+    type: "website",
+    url: "/",
+    siteName: "Tyler Hobbs",
+    title,
+    description,
+    images: [{ url: "/og.png", width: 1200, height: 630, alt: title }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title,
+    description,
+    images: ["/og.png"],
+  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
