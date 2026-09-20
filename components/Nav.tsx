@@ -12,7 +12,7 @@ export function Nav() {
         </a>
         <nav className="links">
           {sections.map((s) => (
-            <a key={s.id} href={`#${s.id}`}>
+            <a key={s.id} href={"href" in s && s.href ? s.href : `#${s.id}`}>
               {s.label}
             </a>
           ))}
