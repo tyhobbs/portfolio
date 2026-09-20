@@ -20,8 +20,7 @@ export function Contact() {
             <span className="grad">measurement</span>
           </h2>
           <p>
-            Open to ML engineer and applied scientist roles starting 2027. The fastest way to reach
-            me is email.
+            Happy to talk about any of this work. The fastest way to reach me is email.
           </p>
         </div>
         <div className="links">
