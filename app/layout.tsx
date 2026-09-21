@@ -23,7 +23,7 @@ const mono = localFont({
   display: "swap",
 });
 
-const title = "Tyler Hobbs — Machine Learning Engineer";
+const title = "Tyler Hobbs — Applied Machine Learning";
 const description =
   "LLM fine-tuning, model evaluation and medical imaging. M.S. Data Science, University of Virginia, December 2026.";
 
