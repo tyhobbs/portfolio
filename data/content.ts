@@ -12,8 +12,10 @@ export type Skill = {
 
 export const person = {
   name: "Tyler Hobbs",
+  firstName: "Tyler",
+  lastName: "Hobbs",
   handle: "tyhobbs",
-  title: ["Machine", "Learning", "Engineer"],
+  role: ["Applied", "machine learning"],
   lead:
     "I build models, then check whether their numbers mean what they appear to. " +
     "Four years in proteomics and genomics labs, now finishing an ",
