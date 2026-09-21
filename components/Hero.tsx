@@ -4,13 +4,14 @@ export function Hero() {
   return (
     <section className="hero" id="top">
       <div className="wrap">
-        <h1>
-          {person.title[0]}
+        <h1 className="name-big">
+          {person.firstName}
           <br />
-          {person.title[1]}
-          <br />
-          <span className="grad">{person.title[2]}</span>
+          <span className="grad">{person.lastName}</span>
         </h1>
+        <p className="role-line">
+          {person.role[0]} <span className="grad">{person.role[1]}</span>
+        </p>
         <p className="lead">
           {person.lead}
           <b>{person.leadStrong}</b>
