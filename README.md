@@ -65,15 +65,6 @@ Add a new study by appending to the array. The index page, the routes and the
 previous/next links all pick it up automatically — just add a matching
 `Case study` link in `data/content.ts` if you want it on the home page too.
 
-## Still to do
-
-1. **Social image.** Add `public/og.png` at 1200x630, then set `metadataBase`
-   and `openGraph.images` in `app/layout.tsx` once the site has a URL. This is
-   the preview card shown when the link is pasted into LinkedIn, Slack or
-   iMessage. Without it, those show an empty box.
-2. **Glaucoma case study.** It credits the whole team but doesn't say which
-   parts were mine — worth a short "My role" section.
-
 Done: resume (`public/Resume_DS.pdf`), favicons and app icons, all project and
 paper links.
 
