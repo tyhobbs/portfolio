@@ -313,3 +313,13 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
 
 .next{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px;
   border-top:1px solid var(--line);padding-top:32px}
+.hero h1.name-big{font-size:clamp(46px,9.6vw,128px)}
+.hero .role-line{
+  font-weight:500;font-size:clamp(20px,2.6vw,32px);letter-spacing:-.015em;
+  margin:22px 0 0;color:var(--muted);
+}
+.hero .role-line .grad{
+  background:linear-gradient(100deg,var(--accent),var(--violet) 55%,var(--teal));
+  -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;
+  font-weight:700;
+}
